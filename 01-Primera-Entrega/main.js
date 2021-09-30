@@ -13,8 +13,13 @@ class nino {
         this.padre = padre = prompt('Nombre Padre');
         this.madre = madre = prompt('Nombre Madre');
         this.id = id = prompt('Id');}
+        datosNino () {
+            alert('Alumno agregado correctamente:' + '\n' + this.nombre + '\n' + this.apellidos + '\n' + this.edad);
+        }
     }
 
     const nino1 = new nino();
+
+    nino1.datosNino();
 
     console.log(nino1);

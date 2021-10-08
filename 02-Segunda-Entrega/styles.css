@@ -107,6 +107,46 @@ input {
 
 
 
+/* Comidas */
+
+.comidas {
+    margin-bottom: 3rem;
+    background-color: rgb(244, 244, 244);
+    padding: 1.5rem 0;
+}
+
+.titulo-comidas {
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.container-comidas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: clamp(1rem, 5vmin, 1.3rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.form-comidas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+button {
+    margin-bottom: 50px;
+}
+
+
+
+
+
 
   /* Fluid Typography */
 

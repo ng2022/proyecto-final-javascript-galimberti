@@ -57,6 +57,10 @@ nav {
 
   /* Seccion Toma de leche */
 
+.titulo-seccion{
+    margin: 0.8rem 0 0.8rem 2rem;
+}
+
 .container-toma-leche {
     display: flex;
     flex-direction: row;
@@ -64,37 +68,11 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 2.5rem;
+    margin-top: 0.8rem;
 }
 
 .titulo-toma {
-    margin-top: 1rem;
-}
-
-.primera-toma {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.form-toma-leche {
-    margin-left: 3rem;
-}
-
-
-input {
-    height: 3rem;
-    width: 9rem;
-    font-size: clamp(1.3rem, 5vmin, 1.4rem);
-	line-height: clamp(1.5rem, 5vmin, 1.6rem);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    text-align: left;
-}
-
-.input-toma-leche{
-    display: block;
+    margin: 0.8rem 0 0.8rem 0;
 }
 
 .label-toma-leche {
@@ -102,6 +80,31 @@ input {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: left;
+    color: rgb(157, 157, 157);
+}
+
+.input-hora-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.input-ml-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
 }
 
 
@@ -138,9 +141,24 @@ input {
     align-items: center;
 }
 
+.input-comidas{
+    height: 3.5rem;
+    width: 3.5rem;   
+}
 
-button {
-    margin-bottom: 50px;
+
+.button-enviar {
+    height: 4rem;
+    width: 50%;
+    margin-top: 1.5rem;
+    background-color: rgb(13, 182, 103);
+    color: whitesmoke;
+    border: none;
+    border-radius: 100rem;
+    font-size: clamp(1.3rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-left: 25%;
 }
 
 
@@ -149,29 +167,38 @@ button {
 
 
   /* Fluid Typography */
+  h2 {
+	font-size: clamp(2.2rem, 5vmin, 2.8rem);
+	line-height: clamp(2.4rem, 5vmin, 3rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
 
   h3 {
-	font-size: clamp(2rem, 5vmin, 2.6rem);
-	line-height: clamp(2rem, 5vmin, 2.4rem);
-    color: rgb(40, 40, 40);
+	font-size: clamp(1.8rem, 5vmin, 2.4rem);
+	line-height: clamp(2rem, 5vmin, 2.6rem);
+    color: rgb(74, 74, 74);
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     text-align: left;
 }
 
 h4 {
 	font-size: clamp(1.2rem, 5vmin, 1.6rem);
 	line-height: clamp(1.6rem, 5vmin, 1.9rem);
-    color: rgb(40, 40, 40);
+    color: rgb(74, 74, 74);
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     text-align: left;
 }
 
 h5 {
 	font-size: clamp(1.8rem, 5vmin, 2.1rem);
 	line-height: clamp(1.6rem, 5vmin, 1.9rem);
-    color: rgb(40, 40, 40);
+    color: rgb(74, 74, 74);
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 300;
     text-align: left;

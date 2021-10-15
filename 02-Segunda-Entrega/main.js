@@ -39,3 +39,30 @@ function guardarTodo () {
     }
     localStorage.setItem('dia1', JSON.stringify(dia1));
 }
+
+// 1 Datos del JSON
+// 2 boton
+// 3 si clicco boton aparecen los datos
+
+
+// Traigo los datos del JSON
+
+// console.log('Parseado' + fichaNino[0].cantidad);
+
+
+
+
+$('#buttonFicha').on('click', () => {
+    const fichaNino = JSON.parse(localStorage.getItem('dia1'));
+
+    for (const datos of fichaNino) {
+        $('body').append(`
+        <div class="pop-up-ficha">
+        <h4>${datos.toma}</h4>
+        <h4>${datos.hora}</h4>
+        <h4>${datos.ml}</h4>
+        <h4>${datos.portada}</h4>
+        <h4>${datos.cantidad}</h4>
+        </div>`);
+    }
+});

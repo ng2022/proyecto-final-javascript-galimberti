@@ -40,18 +40,10 @@ function guardarTodo () {
     localStorage.setItem('dia1', JSON.stringify(dia1));
 }
 
-// 1 Datos del JSON
-// 2 boton
-// 3 si clicco boton aparecen los datos
-
-
-// Traigo los datos del JSON
-
-// console.log('Parseado' + fichaNino[0].cantidad);
 
 
 
-
+// Boton Visualizar los datos
 $('#buttonFicha').on('click', () => {
     const fichaNino = JSON.parse(localStorage.getItem('dia1'));
 

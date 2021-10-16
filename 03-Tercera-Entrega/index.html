@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto-Final-Entrega-2-Galimberti</title>
+</head>
+<body>
+    <!-- Menu Navegacion -->
+    <nav>Hello</nav>
+
+    <!-- /////////////////////////////// -->
+    <!-- Seccion Datos Alumno -->
+    <section class="container-datos-alumno">
+        <div class="imagen-perfil-alumno">
+            <img src="/imagenes/alumno-image-profile.jpg" alt="">
+        </div>
+        <div class="nombreAlumno">
+            <div class="nombreApellidoInterno">
+                <h2>Nombre</h2>
+                <h2>Apellido</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <!-- Boton Modal -->
+    <button id="buttonFicha" class="button-enviar">Ficha</button>
+    <!-- Contenedor Modal -->
+    <div id="modalFichaNino" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+          <span id="cierra-modal" class="close">&times;</span>
+          </div>
+    </div>
+
+
+
+    <!-- /////////////////////////////// -->
+    <!-- Seccion Dia Actual -->
+    <section>
+        <div id="diaActual"></div>
+    </section>
+
+    <!-- /////////////////////////////// -->
+    <!-- Seccion 1ª Toma de leche -->
+    <h3 class="titulo-seccion">Tomas de leche</h3>
+    <section class="container-toma-leche">
+                <form id="input">
+                    <h4 class="titulo-toma">1ª Toma</h4>
+                    <!-- <label for="tomaUnoH" class="label-toma-leche">Hora</label>
+                    <input type="time" id="hora1" name="toma1" class="input-hora-toma-leche"
+                           placeholder="ej. 10:30" size="10" minlength="5" maxlength="5"> -->
+                    <label for="tomaUnoMl" class="label-toma-leche">ml</label>
+                    <input type="number" id="ml1" name="toma1" class="input-ml-toma-leche"
+                           placeholder="ej. 100" minlength="2" maxlength="4">        
+                </form>
+                <form>
+                    <h4 class="titulo-toma">2ª Toma</h4>
+                    <!-- <label for="tomaUnoH" class="label-toma-leche">Hora</label>
+                    <input type="time" id="hora2" name="toma2" class="input-hora-toma-leche"
+                           placeholder="ej. 10:30" size="10" minlength="5" maxlength="5"> -->
+                    <label for="tomaUnoMl" class="label-toma-leche">ml</label>
+                    <input type="number" id="ml2" name="toma2" class="input-ml-toma-leche"
+                           placeholder="ej. 100" minlength="2" maxlength="4">        
+                </form>
+                <form>
+                    <h4 class="titulo-toma">3ª Toma</h4>
+                    <!-- <label for="tomaUnoH" class="label-toma-leche">Hora</label>
+                    <input type="time" id="hora3" name="toma3"class="input-hora-toma-leche"
+                           placeholder="ej. 10:30" size="10" minlength="5" maxlength="5"> -->
+                    <label for="tomaUnoMl" class="label-toma-leche">ml</label>
+                    <input type="number" id="ml3" name="toma3" class="input-ml-toma-leche"
+                           placeholder="ej. 100" minlength="2" maxlength="4">        
+                </form>
+    </section>
+
+    <!-- /////////////////////////////// -->
+    <!-- Seccion Comidas -->
+
+    <!-- Almuerzo -->
+    <section class="comidas">
+        <h4 class="titulo-comidas">Almuerzo</h4>
+        <div class="container-comidas">
+            <div class="form-comidas" id="datosAlmuerzo">
+                <label for="todoAlmuerzo">Todo</label>
+                <input type="radio" name="almuerzo" id="todoComidaAlmuerzo" class="input-comidas" value="todo">
+            </div>
+            <div class="form-comidas">
+                <label for="casiAlmuerzo">Casi todo</label>
+                <input type="radio" name="almuerzo" id="casiComidaAlmuerzo" class="input-comidas" value="casi">
+            </div>
+            <div class="form-comidas">
+                <label for="pocoAlmuerzo">Poco</label>
+                <input type="radio" name="almuerzo" id="pocoComidaAlmuerzo" class="input-comidas" value="poco">
+            </div>
+            <div class="form-comidas">
+                <label for="nadaAlmuerzo">Nada</label>
+                <input type="radio" name="almuerzo" id="nadaComidaAlmuerzo" class="input-comidas" value="nada">
+            </div>
+        </div>
+    </section>
+
+
+        <!-- 1 Plato -->
+        <section class="comidas">
+            <h4 class="titulo-comidas">1 Plato</h4>
+            <div class="container-comidas">
+                <div class="form-comidas" id="datosAlmuerzo">
+                    <label for="todoAlmuerzo">Todo</label>
+                    <input type="radio" name="primer-plato" id="todoComidaAlmuerzo" class="input-comidas" value="todo">
+                </div>
+                <div class="form-comidas">
+                    <label for="casiAlmuerzo">Casi todo</label>
+                    <input type="radio" name="primer-plato" id="casiComidaAlmuerzo" class="input-comidas" value="casi">
+                </div>
+                <div class="form-comidas">
+                    <label for="pocoAlmuerzo">Poco</label>
+                    <input type="radio" name="primer-plato" id="pocoComidaAlmuerzo" class="input-comidas" value="poco">
+                </div>
+                <div class="form-comidas">
+                    <label for="nadaAlmuerzo">Nada</label>
+                    <input type="radio" name="primer-plato" id="nadaComidaAlmuerzo" class="input-comidas" value="nada">
+                </div>
+            </div>
+        </section>
+
+
+    <button id="button" class="button-enviar">Guardar</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html> 

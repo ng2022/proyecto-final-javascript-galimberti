@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100%;
+}
+
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+  }
+
+
+
+  /* Seccion Datos Alumno */
+
+  .container-datos-alumno {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .imagen-perfil-alumno {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .imagen-perfil-alumno img {
+      height: 70px;
+      width: 70px;
+      border-radius: 100%;
+      margin: 25px 15px 25px 0px;
+      object-fit:cover;
+  }
+
+  .nombreAlumno {
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      margin: 25px 50px 25px 0px;
+  }
+
+
+
+  /* Seccion Toma de leche */
+
+.titulo-seccion{
+    margin: 0.8rem 0 0.8rem 2rem;
+}
+
+.container-toma-leche {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+    margin-top: 0.8rem;
+}
+
+.titulo-toma {
+    margin: 0.8rem 0 0.8rem 0;
+}
+
+.label-toma-leche {
+    font-size: clamp(1rem, 5vmin, 1.3rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(157, 157, 157);
+}
+
+.input-hora-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.input-ml-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+
+
+
+/* Comidas */
+
+.comidas {
+    margin-bottom: 3rem;
+    background-color: rgb(244, 244, 244);
+    padding: 1.5rem 0;
+}
+
+.titulo-comidas {
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.container-comidas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: clamp(1rem, 5vmin, 1.3rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.form-comidas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-comidas{
+    height: 3.5rem;
+    width: 3.5rem;   
+}
+
+
+.button-enviar {
+    height: 4rem;
+    width: 50%;
+    margin-top: 1.5rem;
+    background-color: rgb(13, 182, 103);
+    color: whitesmoke;
+    border: none;
+    border-radius: 100rem;
+    font-size: clamp(1.3rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-left: 25%;
+}
+
+
+
+
+.pop-up-ficha {
+    width: 70%;
+    height: 100px;
+    background-color: aqua;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  /* Fluid Typography */
+  h2 {
+	font-size: clamp(2.2rem, 5vmin, 2.8rem);
+	line-height: clamp(2.4rem, 5vmin, 3rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+  h3 {
+	font-size: clamp(1.8rem, 5vmin, 2.4rem);
+	line-height: clamp(2rem, 5vmin, 2.6rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+h4 {
+	font-size: clamp(1.2rem, 5vmin, 1.6rem);
+	line-height: clamp(1.6rem, 5vmin, 1.9rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+h5 {
+	font-size: clamp(1.8rem, 5vmin, 2.1rem);
+	line-height: clamp(1.6rem, 5vmin, 1.9rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    text-align: left;
+}

@@ -121,37 +121,32 @@ $('#buttonFicha').on('click', () => {
     $('body').append(`
     <div class="modal">
     <div class="modal-content">
-    <span id="cierra-modal" class="close">&times;</span>
+    <h2>Resumen ficha:</h2>
+    <div class="div-toma"></div>
+    <div class="div-portadas"></div>
+    <button class="boton-cierre-modal">Cerrar</button>
     </div>
     </div>`);
+    // Efecto Modal
     $('.modal').fadeIn('slow');
-    // Click en cerrar X
-$('#cierra-modal').on('click', () =>{
+    // Cierre Modal
+    $('.boton-cierre-modal').on('click', () =>{
     $('.modal').fadeOut('slow');
 });
     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
 
     for (const datos of fichaToma) {
-        $('.modal-content').append(`
-        <h4>Toma: ${datos.toma}</h4>
+        $('.div-toma').append(`
+        <h3 class="titulo-toma-ficha">${datos.toma}</h3>
         <h4>Hora: ${datos.hora}</h4>
         <h4>Ml: ${datos.ml}</h4>`);
     }
 
     for (const datos of fichaPortadas) {
-        $('.modal-content').append(`
+        $('.div-portadas').append(`
+        <h3 class="titulo-toma-ficha">Portada</h3>
         <h4>${datos.portada}</h4>
         <h4>${datos.cantidad}</h4>`);
     }
 });
-
-
-
-
-// // Click fuera del modal
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }

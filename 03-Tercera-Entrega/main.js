@@ -71,20 +71,72 @@ function guardarPortadas () {
 
 
 
+// // Modal
+// let modal = document.getElementById("modalFichaNino");
+
+// // Click en el boton
+// $('#buttonFicha').on('click', () => {
+//     modal.style.display = "block";
+//     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
+//     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
+
+//     $('modal').show();
+
+//     for (const datos of fichaToma) {
+//         $('.modal-content').append(`
+//         <h4>Toma: ${datos.toma}</h4>
+//         <h4>Hora: ${datos.hora}</h4>
+//         <h4>Ml: ${datos.ml}</h4>`);
+//     }
+
+//     for (const datos of fichaPortadas) {
+//         $('.modal-content').append(`
+//         <h4>${datos.portada}</h4>
+//         <h4>${datos.cantidad}</h4>`);
+//     }
+// });
+
+// // Cerrar Modal
+// let span = document.getElementsByClassName("close")[0];
+
+// // Click en cerrar X
+// $('#cierra-modal').on('click', () =>{
+//     modal.style.display = "none";
+// });
+
+// // Click fuera del modal
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
+
+
+
+
 // Modal
-let modal = document.getElementById("modalFichaNino");
 
 // Click en el boton
 $('#buttonFicha').on('click', () => {
-    modal.style.display = "block";
+    $('body').append(`
+    <div class="modal">
+    <div class="modal-content">
+    <span id="cierra-modal" class="close">&times;</span>
+    </div>
+    </div>`);
+    $('.modal').fadeIn('slow');
+    // Click en cerrar X
+$('#cierra-modal').on('click', () =>{
+    $('.modal').fadeOut('slow');
+});
     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
 
     for (const datos of fichaToma) {
         $('.modal-content').append(`
-        <h4>${datos.toma}</h4>
-        <h4>${datos.hora}</h4>
-        <h4>${datos.ml}</h4>`);
+        <h4>Toma: ${datos.toma}</h4>
+        <h4>Hora: ${datos.hora}</h4>
+        <h4>Ml: ${datos.ml}</h4>`);
     }
 
     for (const datos of fichaPortadas) {
@@ -94,17 +146,12 @@ $('#buttonFicha').on('click', () => {
     }
 });
 
-// Cerrar Modal
-let span = document.getElementsByClassName("close")[0];
 
-// Click en cerrar X
-$('#cierra-modal').on('click', () =>{
-    modal.style.display = "none";
-});
 
-// Click fuera del modal
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
+// // Click fuera del modal
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }

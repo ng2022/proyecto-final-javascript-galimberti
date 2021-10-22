@@ -42,79 +42,8 @@ function guardarPortadas () {
 }
 
 
-// Boton Visualizar los datos
-// $('#buttonFicha').on('click', () => {
-//     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
-//     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
 
-//     for (const datos of fichaToma) {
-//         $('body').append(`
-//         <div class="pop-up-ficha">
-//         <h4>${datos.toma}</h4>
-//         <h4>${datos.hora}</h4>
-//         <h4>${datos.ml}</h4>
-//         </div>`);
-//     }
-
-//     for (const datos of fichaPortadas) {
-//         $('body').append(`
-//         <div class="pop-up-ficha">
-//         <h4>${datos.portada}</h4>
-//         <h4>${datos.cantidad}</h4>
-//         </div>`);
-//     }
-// });
-
-
-
-
-
-
-
-// // Modal
-// let modal = document.getElementById("modalFichaNino");
-
-// // Click en el boton
-// $('#buttonFicha').on('click', () => {
-//     modal.style.display = "block";
-//     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
-//     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
-
-//     $('modal').show();
-
-//     for (const datos of fichaToma) {
-//         $('.modal-content').append(`
-//         <h4>Toma: ${datos.toma}</h4>
-//         <h4>Hora: ${datos.hora}</h4>
-//         <h4>Ml: ${datos.ml}</h4>`);
-//     }
-
-//     for (const datos of fichaPortadas) {
-//         $('.modal-content').append(`
-//         <h4>${datos.portada}</h4>
-//         <h4>${datos.cantidad}</h4>`);
-//     }
-// });
-
-// // Cerrar Modal
-// let span = document.getElementsByClassName("close")[0];
-
-// // Click en cerrar X
-// $('#cierra-modal').on('click', () =>{
-//     modal.style.display = "none";
-// });
-
-// // Click fuera del modal
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-
-
-
-// Modal
+// Modal Visualizar Ficha Niño
 
 // Click en el boton
 $('#buttonFicha').on('click', () => {
@@ -133,6 +62,8 @@ $('#buttonFicha').on('click', () => {
     $('.boton-cierre-modal').on('click', () =>{
     $('.modal').fadeOut('slow');
 });
+
+    // Ficha de datos
     const fichaToma = JSON.parse(localStorage.getItem('dia1-Toma'));
     const fichaPortadas = JSON.parse(localStorage.getItem('dia1-Portadas'));
 
@@ -145,8 +76,22 @@ $('#buttonFicha').on('click', () => {
 
     for (const datos of fichaPortadas) {
         $('.div-portadas').append(`
-        <h3 class="titulo-toma-ficha">Portada</h3>
-        <h4>${datos.portada}</h4>
+        <h3>${datos.portada}</h3>
         <h4>${datos.cantidad}</h4>`);
     }
 });
+
+
+// Enviar datos al servidor con AJAX
+const URLPOST = 'https://jsonplaceholder.typicode.com/users';
+const infoPost = {nombre:'Gabriel', apellidos:'Batistuta'};
+$('#button').click(() => {
+    $.post(URLPOST, infoPost, (respuesta, estado) => {
+        if(estado == 'success') {
+            $('.confirmacion-datos-guardados').prepend(
+                $(`<h4 class="mensaje-datos-guardados">Datos guardados para ${respuesta.nombre}</h4>`).delay(1000).fadeOut(1500)
+            );
+        }
+    });
+});
+

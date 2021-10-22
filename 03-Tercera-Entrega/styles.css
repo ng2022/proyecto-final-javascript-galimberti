@@ -22,6 +22,10 @@ nav {
   }
 
 
+
+
+
+
   /* BOTONES */
   .button-enviar {
     height: 4rem;
@@ -35,6 +39,11 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-left: 25%;
+}
+
+.mensaje-datos-guardados{
+    color: rgb(13, 182, 103);
+    text-align: center;
 }
 
 .boton-cierre-modal {
@@ -52,6 +61,10 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
+
+
+
+
 
 
   /* Seccion Datos Alumno */
@@ -86,7 +99,11 @@ nav {
 
 
 
-  /* Seccion Toma de leche */
+
+
+
+
+/* Seccion Toma de leche */
 
 .titulo-seccion{
     margin: 0.8rem 0 0.8rem 2rem;
@@ -141,6 +158,10 @@ nav {
 
 
 
+
+
+
+
 /* Comidas */
 
 .comidas {
@@ -180,6 +201,9 @@ nav {
 
 
 
+
+
+
 /* Modal */
 .modal {
     display: none;
@@ -204,12 +228,23 @@ nav {
       margin-bottom: 3rem;
   }
 
+  .div-portadas h3 {
+    margin-bottom: 0.4rem;
+    text-transform:capitalize;
+}
+
+  .div-portadas h4 {
+    margin-bottom: 2.5rem;
+    text-transform:capitalize;
+}
+
   .div-toma {
     margin-bottom: 3rem;
   }
 
   .titulo-toma-ficha {
-      margin-top: 2rem ;
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
       text-transform:capitalize;
   }
 
@@ -251,8 +286,8 @@ h4 {
 }
 
 h5 {
-	font-size: clamp(1.8rem, 5vmin, 2.1rem);
-	line-height: clamp(1.6rem, 5vmin, 1.9rem);
+	font-size: clamp(1rem, 5vmin, 1.4rem);
+	line-height: clamp(1.3rem, 5vmin, 1.7rem);
     color: rgb(74, 74, 74);
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 300;

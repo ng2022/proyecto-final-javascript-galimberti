@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100%;
+}
+
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5em;
+  }
+
+
+
+/* CABECERA */
+.container-cabecera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 6rem;
+    margin-bottom: 2rem;
+}
+
+
+  /* BOTONES */
+  .button-enviar {
+    height: 4rem;
+    width: 50%;
+    margin-top: 1.5rem;
+    background-color: rgb(13, 182, 103);
+    color: whitesmoke;
+    border: none;
+    border-radius: 100rem;
+    font-size: clamp(1.3rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-left: 25%;
+}
+
+.mensaje-datos-guardados{
+    color: rgb(13, 182, 103);
+    text-align: center;
+}
+
+.boton-cierre-modal {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 100%;
+    margin-top: 5rem;
+    background-color: transparent;
+    border: 1px solid rgb(76, 0, 255);
+    color: rgb(76, 0, 255);
+    border-radius: 100rem;
+    font-size: clamp(1.3rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.button-anadir-alumno {
+    height: 4rem;
+    width: 45%;
+    background-color: rgb(13, 182, 103);
+    color: whitesmoke;
+    border: none;
+    border-radius: 100rem;
+    font-size: clamp(1.3rem, 5vmin, 1.6rem);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+
+
+
+
+  /* Seccion Datos Alumno */
+
+  .container-datos-alumno {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .imagen-perfil-alumno {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .imagen-perfil-alumno img {
+      height: 70px;
+      width: 70px;
+      border-radius: 100%;
+      margin: 25px 15px 25px 0px;
+      object-fit:cover;
+  }
+
+  .nombreAlumno {
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      margin: 25px 50px 25px 0px;
+  }
+
+
+
+
+
+
+
+/* Seccion Toma de leche */
+
+.titulo-seccion{
+    margin: 0.8rem 0 0.8rem 2rem;
+}
+
+.container-toma-leche {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+    margin-top: 0.8rem;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: white;
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked {
+	/* background-color: #555555; */
+    background-color: #7ee8fa;
+    background-image: linear-gradient(300deg, #7ee8fa 0%, #beffb7 74%);
+    
+
+}
+
+.titulo-toma {
+    margin: 0.8rem 0 0.8rem 0;
+}
+
+.label-toma-leche {
+    font-size: clamp(1rem, 5vmin, 1.3rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(157, 157, 157);
+}
+
+.input-hora-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.input-ml-toma-leche{
+    height: 4.8rem;
+    width: 9rem;
+    font-size: clamp(1.3rem, 5vmin, 1.4rem);
+	line-height: clamp(1.5rem, 5vmin, 1.6rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+
+
+
+
+
+
+
+/* Comidas */
+
+.comidas {
+    margin-bottom: 3rem;
+    background-color: rgb(244, 244, 244);
+    padding: 1.5rem 0;
+}
+
+.titulo-comidas {
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.container-comidas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: clamp(1rem, 5vmin, 1.3rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.form-comidas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-comidas{
+    height: 3.5rem;
+    width: 3.5rem;   
+}
+
+
+
+
+
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    left: 0;
+    top: 0;
+    margin-top: 12rem;
+    width: 100%; /* Could be more or less, depending on screen size */
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+    background-color: #f7f7f7;
+  }
+
+  /* Modal Content/Box */
+.modal-content {
+    padding: 5rem 7rem 0 7rem;
+  }
+
+  .div-portadas {
+      margin-bottom: 3rem;
+  }
+
+  .div-portadas h3 {
+    margin-bottom: 0.4rem;
+    text-transform:capitalize;
+}
+
+  .div-portadas h4 {
+    margin-bottom: 2.5rem;
+    text-transform:capitalize;
+}
+
+  .div-toma {
+    margin-bottom: 3rem;
+  }
+
+  .titulo-toma-ficha {
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
+      text-transform:capitalize;
+  }
+
+
+
+  /* Modal Anadir Alumno */
+  .modal-anadir-alumno {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    left: 0;
+    top: 0;
+    margin-top: 12rem;
+    width: 100%; /* Could be more or less, depending on screen size */
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+    background-color: #f7f7f7;
+  }
+
+
+
+
+
+
+
+
+  /* Fluid Typography */
+  h1 {
+	font-size: clamp(3.4rem, 5vmin, 4rem);
+	line-height: clamp(3.2rem, 5vmin, 3.8rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+
+
+  h2 {
+	font-size: clamp(2.2rem, 5vmin, 2.8rem);
+	line-height: clamp(2.4rem, 5vmin, 3rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+  h3 {
+	font-size: clamp(1.8rem, 5vmin, 2.4rem);
+	line-height: clamp(2rem, 5vmin, 2.6rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+h4 {
+	font-size: clamp(1.2rem, 5vmin, 1.6rem);
+	line-height: clamp(1.6rem, 5vmin, 1.9rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+h5 {
+	font-size: clamp(1rem, 5vmin, 1.4rem);
+	line-height: clamp(1.3rem, 5vmin, 1.7rem);
+    color: rgb(74, 74, 74);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    text-align: left;
+}

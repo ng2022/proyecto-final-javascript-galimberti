@@ -18,7 +18,7 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 4em;
+    height: 5em;
   }
 
 
@@ -117,6 +117,20 @@ nav {
     justify-content: space-evenly;
     margin-bottom: 2.5rem;
     margin-top: 0.8rem;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: white;
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked {
+	/* background-color: #555555; */
+    background-color: #7ee8fa;
+    background-image: linear-gradient(300deg, #7ee8fa 0%, #beffb7 74%);
+    
+
 }
 
 .titulo-toma {

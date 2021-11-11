@@ -97,7 +97,7 @@ $('#buttonFicha').on('click', () => {
         }
         
         $('.div-portadas').append(`
-        <h3>Comida: no hay datos</h3>`);
+        <h3>Comida: no hay datos guardados</h3>`);
     } else if (!ninoficha.tomas.length && ninoficha.comidas.length) {
         for (const datos of ninoficha.comidas) {
             $('.div-portadas').append(`
@@ -105,7 +105,7 @@ $('#buttonFicha').on('click', () => {
             <h4>${datos.cantidad}</h4>`);
         }
         $('.div-portadas').append(`
-        <h3>Tomas: no hay datos</h3>`);
+        <h3>Tomas: no hay datos guardados</h3>`);
     } 
     else if (ninoficha.tomas.length && ninoficha.comidas.length){
         for (const datos of ninoficha.tomas) {

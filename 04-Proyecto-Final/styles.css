@@ -411,6 +411,21 @@ body {
             font-weight: 400;
         }
 
+        #buttonFicha2 {
+            height: 4rem;
+            width: 20%;
+            margin-top: 0;
+            margin-bottom: 3rem;
+            margin-left: 3rem;
+            background-color: transparent;
+            border: 1px solid rgb(255, 0, 81);
+            color: rgb(255, 0, 81);
+            border-radius: 100rem;
+            font-size: clamp(1.3rem, 5vmin, 1.6rem);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 400;
+        }
+
 
 
 
